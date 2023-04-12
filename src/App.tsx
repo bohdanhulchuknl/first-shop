@@ -5,13 +5,16 @@ import { Routes, Route } from "react-router-dom";
 import { Home, NoMatch } from "./pages";
 //layouts
 import { PageNavBar } from "./layout";
+//component
+import LoadingModal from "./features/loadingModal/components/LoadingModal";
 
 type Props = {};
 
 const App = (props: Props) => {
+
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+    <div className="w-full">
+      <LoadingModal />
       <PageNavBar />
       <Routes>
         <Route index element={<Home />} />

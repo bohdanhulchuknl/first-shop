@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    /* colors */
+    --text-color: rgb(255, 0, 0);
+
+}
+

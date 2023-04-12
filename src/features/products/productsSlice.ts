@@ -2,32 +2,51 @@ import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import type { RootState } from "../../app/store";
 
+export interface MenShoes {
+  sku: string,
+  name: string,
+  price: number,
+  category: string,
+  vendor: string,
+  model: string,
+  description: string,
+  gallery: [string],
+  color: string,
+  weight: string,
+  country: string,
+  sizes: [
+    {
+      size: string,
+      amount: string
+    }
+  ]
+}
+
 interface ProductsState {
   value: number;
+  menShoes?: [MenShoes] | []
 }
 
 const initialState: ProductsState = {
   value: 0,
+  menShoes: []
 };
 
 export const productsSlice = createSlice({
   name: "products",
   initialState,
   reducers: {
-    increment: (state) => {
-      state.value += 1;
-    },
-    decrement: (state) => {
-      state.value -= 1;
-    },
     incrementByAmount: (state, action: PayloadAction<number>) => {
       state.value += action.payload;
     },
+    setMenShoes: (state, action:PayloadAction<[MenShoes]>) => {
+      state.menShoes = action.payload
+    }
   },
 });
 
-export const { increment, decrement, incrementByAmount } = productsSlice.actions;
+export const { incrementByAmount, setMenShoes } = productsSlice.actions;
 
-export const selectCount = (state: RootState) => state.products.value;
+export const selectMenShoes = (state: RootState) => state.product.menShoes;
 
 export default productsSlice.reducer;

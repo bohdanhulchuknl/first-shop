@@ -16,6 +16,10 @@ const DoubleRangeSlider: React.FC = ({}: IDoubleRangeSliderProps) => {
   const minValue = useAppSelector((state) => state.leftFilterNavBar.minValue);
 
   const handleSliderChange = (newValues: Range) => {
+    console.group()
+    console.log(Range)
+    console.log(newValues)
+    console.groupEnd()
     dispatch(setValues(newValues));
   };
 

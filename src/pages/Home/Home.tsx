@@ -1,5 +1,4 @@
 import React from "react";
-
 //router dom
 import { useNavigate } from "react-router-dom";
 //react query
@@ -40,7 +39,7 @@ const Home = (props: Props) => {
     dispatch(setIsModalOpen(false));
   }
 
-  if (isError) {
+  if (isError && error instanceof Error) {
     console.log(error);
     return (
       <div>

@@ -121,7 +121,7 @@ const LeftFilterNavBar = (props: Props) => {
         toggleItemHandler={handlerToggleSelectedCountry}
         selectedItems={selectedCountries}
       />
-      <DoubleRangeSlider />
+      {/* <DoubleRangeSlider /> */}
       <FilterCategoryList
         categoryTitle="Розміри"
         categoryItems={menShoesFilterValues.sizes}

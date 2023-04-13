@@ -12,7 +12,7 @@ import {
 } from "../../features/leftFilterNavBar/leftFilterNavBarSlice";
 //components
 import { FilterCategoryList } from "../../features/leftFilterNavBar/components";
-import { DoubleRangeSlider } from "../../components";
+// import { DoubleRangeSlider } from "../../components";
 
 type Props = {};
 
